@@ -9,10 +9,12 @@ import (
 	"strconv"
 )
 
-func GinDefault(router *gin.Engine) {
+func GinDefault() *gin.Engine {
+	router := gin.Default()
 	router.GET("/api/confg/AddControl", AddControl)
 	router.GET("/api/confg/DelControl", DelControl)
 	router.GET("/api/confg/GetControl", GetControl)
+	return router
 }
 
 //添加控制
