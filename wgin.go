@@ -24,9 +24,9 @@ func AddControl(c *gin.Context) {
 		return
 	}
 	types, _ := c.GetQuery("type")
-	name := ".control.json"
+	name := "control.json"
 	if types == "1" {
-		name = ".wcontrol.json"
+		name = "wcontrol.json"
 	}
 	uid, err := strconv.Atoi(suid)
 	if err != nil {
@@ -62,9 +62,9 @@ func DelControl(c *gin.Context) {
 		return
 	}
 	types, _ := c.GetQuery("type")
-	name := ".control.json"
+	name := "control.json"
 	if types == "1" {
-		name = ".wcontrol.json"
+		name = "wcontrol.json"
 	}
 	uid, err := strconv.Atoi(suid)
 	if err != nil {
@@ -103,9 +103,9 @@ topDel:
 //查询全部控制
 func GetControl(c *gin.Context) {
 	types, _ := c.GetQuery("type")
-	name := ".control.json"
+	name := "control.json"
 	if types == "1" {
-		name = ".wcontrol.json"
+		name = "wcontrol.json"
 	}
 	data, err := ioutil.ReadFile("./config/" + name)
 	if err != nil {
